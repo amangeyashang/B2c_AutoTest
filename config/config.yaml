@@ -1,0 +1,7 @@
+# drivers ['Chrome','FireFox']
+- Chrome
+- FireFox
+#访问域名
+str: 'seller : https://merch.wkhgs.com/'
+str: 'admin : http://47.98.233.88:30002/login?service=https%3A%2F%2Fcontent.wkhgs.com%2Fwelcome'
+#

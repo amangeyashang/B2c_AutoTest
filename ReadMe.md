@@ -1,0 +1,11 @@
+自动化测试框架：
+config（配置文件）
+data（数据文件）
+drivers（驱动）
+log（日志）
+report（报告）
+screenshot(截图)
+testcase（测试用例）
+testsuite（测试套件）
+utils（公共方法）
+ReadMe.md（加个说明性的文件，告诉团队成员框架需要的环境以及用法）
