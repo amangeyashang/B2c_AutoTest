@@ -8,25 +8,37 @@ import time
 import unittest
 import HTMLTestRunner_cn
 
-
 driver = webdriver.Firefox()
 #driver = webdriver.Chrome()
 
 
 #打开浏览器
-driver.get("https://merch.wkhgs.com")
+driver.get("http://192.168.1.28:8081/")
 #浏览器最大化
 #driver.maximize_window()
+
+#卖家端-登录
+driver.find_element_by_id("login-user").send_keys("18123456789")
+driver.find_element_by_id("login-password").send_keys("123456")
+driver.find_element_by_id("login-btn").click()
+time.sleep(3)
+
 """
 #卖家端-会员注册
-
 driver.find_element_by_xpath("/html/body/div[2]/div/div/div[3]/div[3]/a").click()
+#输入手机号
 driver.find_element_by_id("phone").send_keys("18000000000")
+#输入密码
 driver.find_element_by_id("password").send_keys("123456")
+#输入确认密码
 driver.find_element_by_id("confirmPswd").send_keys("123456")
+#点击【短信校验码】按钮
 driver.find_element_by_id("sms-btn").click()
+#输入校验码
 driver.find_element_by_id("smsCode").send_keys("123456")
+#点击【注册】按钮
 driver.find_element_by_id("register-btn").click()
+#点击【登录】按钮
 driver.find_element_by_xpath("/html/body/div[2]/div/div/div[2]/div[3]/a").click()
 
 #卖家端-忘记密码
@@ -40,13 +52,6 @@ driver.find_element_by_id("password").send_keys("123456")
 driver.find_element_by_id("confirmPswd").send_keys("123456")
 driver.find_element_by_id("submit-btn").click()
 time.sleep(1)
-
-#卖家端-登录
-driver.find_element_by_id("login-user").send_keys("18000000003")
-driver.find_element_by_id("login-password").send_keys("123456")
-driver.find_element_by_id("login-btn").click()
-time.sleep(3)
-
 
 #店铺装饰-店铺基础数据
 time.sleep(1)
@@ -70,73 +75,77 @@ driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[6]').click()
 time.sleep(1)
 driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[7]').click()
 
-#订单管理-订单列表
+#商品管理-商品分类
 time.sleep(1)
-driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[9]').click()
+driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[8]').click()
 
-#订单管理-退货管理
+#订单管理-订单列表
 time.sleep(1)
 driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[10]').click()
 
-#订单管理-订单报表
+#订单管理-退货管理
 time.sleep(1)
 driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[11]').click()
 
-#订单管理-线下订单列表
+#订单管理-订单报表
 time.sleep(1)
 driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[12]').click()
 
-#个人账户-安全设置
+#订单管理-线下订单列表
 time.sleep(1)
-driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[14]').click()
-
-#评价管理-评价列表
-time.sleep(1)
-driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[16]').click()
-
-#配送管理-地址信息
-time.sleep(1)
-driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[18]').click()
-
-#配送管理-默认物流公司
-time.sleep(1)
-driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[19]').click()
-
-#配送管理-运费模版
-time.sleep(1)
-driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[20]').click()
+driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[13]').click()
 
 #促销管理-优惠券中心
 time.sleep(1)
-driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[22]').click()
+driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[15]').click()
 
 #促销管理-简单特价
 time.sleep(1)
-driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[23]').click()
+driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[16]').click()
 
 #促销管理-折扣促销
 time.sleep(1)
-driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[24]').click()
+driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[17]').click()
 
 #促销管理-买赠满赠
 time.sleep(1)
-driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[25]').click()
+driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[18]').click()
 
 #促销管理-加价换购
 time.sleep(1)
-driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[26]').click()
+driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[19]').click()
 
 #促销管理-满减促销
 time.sleep(1)
-driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[27]').click()
+driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[20]').click()
 
 #促销管理-拼团促销
 time.sleep(1)
-driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[28]').click()
+driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[21]').click()
+
+#会员管理-会员列表
+time.sleep(1)
+driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[23]').click()
+
+#会员管理-会员设置
+time.sleep(1)
+driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[24]').click()
+
+#会员管理-会员修改记录
+time.sleep(1)
+driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[25]').click()
+
+#个人账户-安全设置
+time.sleep(1)
+driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[27]').click()
+
+#评价管理-评价列表
+time.sleep(1)
+driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[29]').click()
 
 #账号管理-权限管理
 time.sleep(1)
-driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[30]').click()
+driver.find_element_by_xpath('//*[@id="menu-list"]/div/ul/li[31]').click()
 
 #卖家端-登出
 time.sleep(2)

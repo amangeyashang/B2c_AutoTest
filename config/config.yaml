@@ -2,6 +2,13 @@
 - Chrome
 - FireFox
 #访问域名
-str: 'seller : https://merch.wkhgs.com/'
-str: 'admin : http://47.98.233.88:30002/login?service=https%3A%2F%2Fcontent.wkhgs.com%2Fwelcome'
-#
+- 生产环境
+#str: 'seller : https://merch.wkhgs.com/'
+#str: 'admin : http://47.98.233.88:30002/login?service=https%3A%2F%2Fcontent.wkhgs.com%2Fwelcome'
+- 开发环境
+str: 'seller : http://192.168.1.112:10010/ui'
+str: 'admin : http://192.168.1.47:8080/login?service=http%3A%2F%2F192.168.1.47%3A62006%2Fwelcome'
+#用户信息
+- 用户账号和密码
+str: 'username : 18000000003'
+str: 'password : 123456'

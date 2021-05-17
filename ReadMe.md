@@ -1,4 +1,5 @@
-自动化测试框架：
+B2c_AutoTest自动化测试框架：
+框架采用python+selenium+pytest+yaml+ddt技术的自动化测试框架，能够在测试失败后发送给指定人员邮箱
 config（配置文件）
 data（数据文件）
 drivers（驱动）
