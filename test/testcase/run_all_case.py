@@ -10,8 +10,8 @@ from HTMLTestRunner_cn import HTMLTestRunner
 
 def allcase():
     case_dir="F:\TOOLS\python\PyCharmProjects\AutoTestDemo\\test\\testcase\\seller\\"
-    testcase=unittest.TestSuite()
-    discover=unittest.defaultTestLoader.discover(case_dir,
+    testcase=pytest.TestSuite()
+    discover=pytest.defaultTestLoader.discover(case_dir,
                                                   pattern='*test.py',
                                                   top_level_dir=None)
     #discover方法筛选出来的用例，循环添加到测试套件中

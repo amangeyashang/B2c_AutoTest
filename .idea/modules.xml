@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/B2c_AutoTest.iml" filepath="$PROJECT_DIR$/.idea/B2c_AutoTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../makeMonkey/.idea/makeMonkey.iml" filepath="$PROJECT_DIR$/../makeMonkey/.idea/makeMonkey.iml" />
     </modules>
   </component>
 </project>

@@ -1,13 +1,13 @@
 # -*- coding:utf-8 -*-
 _author_ = 'Leo'
-__date__ = '2021/5/17 11:34'
+__date__ = '2021/5/17 18:17'
 
 from selenium import webdriver
 import time
 import pytest
 import os
 
-#商品管理-商品分类
+#商品审核-SPU审核列表
 class TestCase(object):
     #定义登录方法
     def login(self,user,pwd):
@@ -19,13 +19,13 @@ class TestCase(object):
         self.driver.find_element_by_id("login-btn").click()
         time.sleep(3)
 
-    def test_commodity(self):
+    def test_spuAuditList(self):
         self.login('18000000003','123456') #输入正确的用户名和密码
         time.sleep(1)
-        self.driver.find_element_by_class_name("el-icon-menu").click()#商品管理
+        self.driver.find_element_by_xpath('//*[@id="menu-list"]/ul/li[3]/div').click()#商品审核
         time.sleep(1)
-        self.driver.find_element_by_xpath('//*[@id="menu-list"]/ul/li[2]/ul/li[4]').click()#商品分类
-        time.sleep(3)
+        self.driver.find_element_by_xpath('//*[@id="menu-list"]/ul/li[3]/ul/li[3]').click()#SPU审核列表
+        time.sleep(1)
         self.driver.close()
 
 if __name__ == "__main__":
