@@ -1,6 +1,6 @@
 B2c_AutoTest自动化测试框架：
 框架采用python+selenium+pytest+yaml+ddt技术的自动化测试框架，能够在测试失败后发送给指定人员邮箱
-common(这个包中存放的是常见的通用的类，如读取配置文件)
+common(这个包中存放的是常见的通用的类)
 config（配置文件目录）
 data（数据文件）
 drivers（驱动）

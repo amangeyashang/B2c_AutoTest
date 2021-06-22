@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 A TestRunner for use with the Python unit testing framework. It
-generates a HTML report to show the result at a glance.
+generates a HTML reports to show the result at a glance.
 
 The simplest way to use this is to invoke its main method. E.g.
 
@@ -22,7 +22,7 @@ HTMLTestRunner is a counterpart to unittest's TextTestRunner. E.g.
     runner = HTMLTestRunner.HTMLTestRunner(
                 stream=fp,
                 title='My unit test',
-                description='This demonstrates the report output by HTMLTestRunner.'
+                description='This demonstrates the reports output by HTMLTestRunner.'
                 )
 
     # Use an external stylesheet.
@@ -149,9 +149,9 @@ stderr_redirector = OutputRedirector(sys.stderr)
 
 class Template_mixin(object):
     """
-    Define a HTML template for report customerization and generation.
+    Define a HTML template for reports customerization and generation.
 
-    Overall structure of an HTML report
+    Overall structure of an HTML reports
 
     HTML
     +------------------------+
@@ -529,13 +529,13 @@ class Template_mixin(object):
 
     <div id="div_base">
         %(heading)s
-        %(report)s
+        %(reports)s
         %(ending)s
         %(chart_script)s
     </div>
 </body>
 </html>
-"""  # variables: (title, generator, stylesheet, heading, report, ending, chart_script)
+"""  # variables: (title, generator, stylesheet, heading, reports, ending, chart_script)
 
     ECHARTS_SCRIPT = """
     <script type="text/javascript">
@@ -686,7 +686,7 @@ class Template_mixin(object):
     }
 
     }
-    /* -- report ------------------------------------------------------------------------ */
+    /* -- reports ------------------------------------------------------------------------ */
     #show_detail_line {
         margin-top: 3ex;
         margin-bottom: 1ex;
@@ -1061,7 +1061,7 @@ class HTMLTestRunner(Template_mixin):
 
     def getReportAttributes(self, result):
         """
-        Return report attributes as a list of (name, value).
+        Return reports attributes as a list of (name, value).
         Override this to add custom attributes.
         """
         startTime = str(self.startTime)[:19]

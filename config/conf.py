@@ -6,7 +6,6 @@ import os
 from selenium.webdriver.common.by import By
 from utils.time import dt_strftime
 
-
 class ConfigManager(object):
     # 项目目录
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -15,7 +14,7 @@ class ConfigManager(object):
     ELEMENT_PATH = os.path.join(BASE_DIR, 'page_element')
 
     # 报告文件
-    REPORT_FILE = os.path.join(BASE_DIR, 'report.html')
+    REPORT_FILE = os.path.join(BASE_DIR, 'reports.html')
 
     # 元素定位的类型
     LOCATE_MODE = {
