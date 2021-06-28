@@ -6,14 +6,6 @@ import configparser
 from config.conf import cm
 
 vendor = 'VENDOR'
-account = 'ACCOUNT'
-password = 'PASSWORD'
-vendorName = 'VENDORNAME'
-vendorCode = 'VENDORCODE'
-shopKeeper = 'SHOPKEEPER'
-shopAddress = 'SHOPADDRESS'
-mobileNumber = 'MOBILENUMBER'
-identityCard = 'IDNO'
 
 class ReadConfig(object):
     """配置文件"""
@@ -36,29 +28,6 @@ class ReadConfig(object):
     def url(self):
         return self._get(vendor, vendor)
 
-    def user(self):
-        return self._get(account, account)
-
-    def pwd(self):
-        return self._get(password, password)
-
-    def vendorName(self):
-        return self._get(vendorName, vendorName)
-
-    def vendorCode(self):
-        return self._get(vendorCode, vendorCode)
-
-    def shopKeeper(self):
-        return self._get(shopKeeper, shopKeeper)
-
-    def shopAddress(self):
-        return self._get(shopAddress, shopAddress)
-
-    def mobileNumber(self):
-        return self._get(mobileNumber, mobileNumber)
-
-    def identityCard(self):
-        return self._get(identityCard, identityCard)
 
 ini = ReadConfig()
 

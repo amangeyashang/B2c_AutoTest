@@ -11,10 +11,16 @@ class ConfigManager(object):
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
     # 页面元素目录
-    ELEMENT_PATH = os.path.join(BASE_DIR, 'page_element')
+    ELEMENT_PATH = os.path.join(BASE_DIR, 'page','page_element')
 
     # 报告文件
-    REPORT_FILE = os.path.join(BASE_DIR, 'reports.html')
+    REPORT_FILE = os.path.join(BASE_DIR,"report", 'report.html')
+
+    # 截图文件
+    SCREENSHOT_FILE = os.path.join(BASE_DIR,"screenshot")
+
+    # 测试文件
+    TESTCASE_FILE = os.path.join(BASE_DIR,"test","testcase")
 
     # 元素定位的类型
     LOCATE_MODE = {
@@ -27,8 +33,8 @@ class ConfigManager(object):
 
     # 邮件信息
     EMAIL_INFO = {
-        'username': 'ganchuang@wkhgs.com',  # 邮箱地址
-        'password': 'aPYUGf5YFcCApc8N',
+        'username': '240419606@qq.com',  # 切换成你自己的地址
+        'password': 'lhcvgbzgajsfcade',
         'smtp_host': 'smtp.qq.com',
         'smtp_port': 465
     }
@@ -58,3 +64,4 @@ class ConfigManager(object):
 cm = ConfigManager()
 if __name__ == '__main__':
     print(cm.BASE_DIR)
+    print(dt_strftime("%Y-%m-%d"))

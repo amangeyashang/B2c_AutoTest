@@ -21,7 +21,7 @@ def inspect_element():
             try:
                 pattern, value = k.split('==')
             except ValueError:
-                raise Exception("元素表达式中没有`==`")
+                raise Exception(_path,"元素表达式中没有`==`")
             if pattern not in cm.LOCATE_MODE:
                 raise Exception('%s中元素【%s】没有指定类型' % (_path, k))
             elif pattern == 'xpath':
